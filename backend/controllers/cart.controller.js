@@ -3,7 +3,8 @@ import Product from "../models/product.model.js";
 export const getCartProducts = async (req, res) => {
 	try {
 		const products = await Product.find({ _id: { $in: req.user.cartItems } });
-
+		console.log(products);
+		
 		// add quantity for each product
 		const cartItems = products.map((product) => {
 			const item = req.user.cartItems.find((cartItem) => cartItem.id === product.id);
@@ -40,6 +41,8 @@ export const addToCart = async (req, res) => {
 export const removeAllFromCart = async (req, res) => {
 	try {
 		const { productId } = req.body;
+		console.log(productId);
+		
 		const user = req.user;
 		if (!productId) {
 			user.cartItems = [];
