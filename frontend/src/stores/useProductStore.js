@@ -7,6 +7,7 @@ export const useProductStore = create((set) => ({
 	loading: false,
 
 	setProducts: (products) => set({ products }),
+
 	createProduct: async (productData) => {
 		set({ loading: true });
 		try {
@@ -20,6 +21,7 @@ export const useProductStore = create((set) => ({
 			set({ loading: false });
 		}
 	},
+	
 	fetchAllProducts: async () => {
 		set({ loading: true });
 		try {

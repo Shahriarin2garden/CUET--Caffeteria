@@ -8,8 +8,8 @@ import ProductsList from "../components/ProductsList";
 import { useProductStore } from "../stores/useProductStore";
 
 const tabs = [
-	{ id: "create", label: "Create Product", icon: PlusCircle },
-	{ id: "products", label: "Products", icon: ShoppingBasket },
+	{ id: "create", label: "Create new food", icon: PlusCircle },
+	{ id: "Food", label: "Food", icon: ShoppingBasket },
 	{ id: "analytics", label: "Analytics", icon: BarChart },
 ];
 
@@ -50,7 +50,7 @@ const AdminPage = () => {
 					))}
 				</div>
 				{activeTab === "create" && <CreateProductForm />}
-				{activeTab === "products" && <ProductsList />}
+				{activeTab === "Food" && <ProductsList />}
 				{activeTab === "analytics" && <AnalyticsTab />}
 			</div>
 		</div>

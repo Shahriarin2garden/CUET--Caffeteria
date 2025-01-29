@@ -64,7 +64,7 @@ const EmptyCartUI = () => (
 			className='mt-4 rounded-md bg-emerald-500 px-6 py-2 text-white transition-colors hover:bg-emerald-600'
 			to='/'
 		>
-			Start Shopping
+			Start Ordering Food
 		</Link>
 	</motion.div>
 );
